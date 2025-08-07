@@ -10,7 +10,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Water Track')),
+        appBar: AppBar(
+          backgroundColor: Colors.green,
+          title: const Text(
+            'Water Track',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
         body: WaterTrack(),
       ),
     );
