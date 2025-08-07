@@ -10,6 +10,14 @@ class WaterTrack extends StatefulWidget {
 class _WaterTrackState extends State<WaterTrack> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.blue.shade50,
+      body: Column(
+        children: [
+          SizedBox(height: 30),
+          Container(decoration: BoxDecoration(color: Colors.white)),
+        ],
+      ),
+    );
   }
 }
