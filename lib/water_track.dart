@@ -74,6 +74,9 @@ class _WaterTrackState extends State<WaterTrack> {
                 ),
               ],
             ),
+
+            SizedBox(height: 60),
+            SizedBox(width: 480),
           ],
         ),
       ),
