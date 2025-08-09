@@ -77,12 +77,9 @@ class _WaterTrackState extends State<WaterTrack> {
             ),
 
             SizedBox(height: 60),
-            customButtm(),
+            CustomButton(),
             SizedBox(height: 15),
-            customButtm(),
-            SizedBox(height: 15),
-            customButtm(),
-            SizedBox(height: 15),
+
             SizedBox(
               height: 60,
               width: 450,
