@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  final IconData? icon;
+  final VoidCallback onClick;
+  final int amount;
+
+  const CustomButton({
+    super.key,
+    this.icon,
+    required this.onClick,
+    required this.amount,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +26,10 @@ class CustomButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
           ),
-          onPressed: () {},
+          onPressed: onClick,
           icon: Icon(Icons.water_drop, size: 40),
           label: Text(
-            "200",
+            amount.toString(),
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
         ),

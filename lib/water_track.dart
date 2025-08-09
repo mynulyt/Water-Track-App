@@ -77,23 +77,30 @@ class _WaterTrackState extends State<WaterTrack> {
             ),
 
             SizedBox(height: 60),
-            CustomButton(),
+            CustomButton(onClick: () {}, amount: 200),
+            SizedBox(height: 15),
+            CustomButton(onClick: () {}, amount: 500),
+            SizedBox(height: 15),
+            CustomButton(onClick: () {}, amount: 1000),
             SizedBox(height: 15),
 
-            SizedBox(
-              height: 60,
-              width: 450,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.redAccent,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: 60,
+                width: 450,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.redAccent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
-                ),
-                onPressed: () {},
-                child: Text(
-                  "Clear Tank",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  onPressed: () {},
+                  child: Text(
+                    "Clear Tank",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
                 ),
               ),
             ),
