@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:water_track/water_track.dart';
 
+//Water tracker app
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
