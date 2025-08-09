@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  final IconData? icon;
+  IconData? icon;
   final VoidCallback onClick;
   final int amount;
 
-  const CustomButton({
+  CustomButton({
     super.key,
     this.icon,
     required this.onClick,
@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
             ),
           ),
           onPressed: onClick,
-          icon: Icon(Icons.water_drop, size: 40),
+          icon: Icon(icon ?? Icons.water_drop, size: 40),
           label: Text(
             amount.toString(),
             style: TextStyle(color: Colors.white, fontSize: 20),
