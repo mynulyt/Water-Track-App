@@ -41,7 +41,7 @@ class _WaterTrackState extends State<WaterTrack> {
                   Text(
                     "5000 LTR",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.blueAccent,
                     ),
