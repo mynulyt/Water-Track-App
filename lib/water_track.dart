@@ -65,7 +65,7 @@ class _WaterTrackState extends State<WaterTrack> {
                   ),
                 ),
                 Text(
-                  "70%",
+                  "80%",
                   style: TextStyle(
                     color: Colors.blue,
                     fontWeight: FontWeight.bold,
