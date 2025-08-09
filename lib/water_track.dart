@@ -83,6 +83,23 @@ class _WaterTrackState extends State<WaterTrack> {
             SizedBox(height: 15),
             customButtm(),
             SizedBox(height: 15),
+            SizedBox(
+              height: 60,
+              width: 450,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.redAccent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(
+                  "Clear Tank",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+              ),
+            ),
           ],
         ),
       ),
