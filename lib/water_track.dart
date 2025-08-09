@@ -19,6 +19,12 @@ class _WaterTrackState extends State<WaterTrack> {
     });
   }
 
+  void clearTank() {
+    setState(() {
+      currentInTank = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     double progress = (currentInTank / goal).clamp(0, 1);
@@ -76,7 +82,7 @@ class _WaterTrackState extends State<WaterTrack> {
                   ),
                 ),
                 Text(
-                  "${progress * 100}%".toString(),
+                  "${(progress * 100).toInt()}%",
                   style: TextStyle(
                     color: Colors.blue,
                     fontWeight: FontWeight.bold,
@@ -110,7 +116,7 @@ class _WaterTrackState extends State<WaterTrack> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () => clearTank(),
                   child: Text(
                     "Clear Tank",
                     style: TextStyle(color: Colors.white, fontSize: 20),
