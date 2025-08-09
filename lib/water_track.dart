@@ -35,7 +35,7 @@ class _WaterTrackState extends State<WaterTrack> {
                 children: [
                   Text(
                     "Today's InTank",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 10),
                   Text(
