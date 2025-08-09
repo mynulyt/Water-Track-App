@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water_track/customWidget.dart';
 //Water tracker main app
 
 class WaterTrack extends StatefulWidget {
@@ -76,24 +77,12 @@ class _WaterTrackState extends State<WaterTrack> {
             ),
 
             SizedBox(height: 60),
-            SizedBox(
-              width: 440,
-              height: 60,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-                onPressed: () {},
-                icon: Icon(Icons.water_drop, size: 40),
-                label: Text(
-                  "200",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-              ),
-            ),
+            customButtm(),
+            SizedBox(height: 15),
+            customButtm(),
+            SizedBox(height: 15),
+            customButtm(),
+            SizedBox(height: 15),
           ],
         ),
       ),
