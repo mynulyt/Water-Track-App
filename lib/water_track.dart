@@ -10,8 +10,18 @@ class WaterTrack extends StatefulWidget {
 }
 
 class _WaterTrackState extends State<WaterTrack> {
+  int currentInTank = 0;
+  final int goal = 5000;
+
+  void addWater(int amount) {
+    setState(() {
+      currentInTank = (currentInTank + amount).clamp(0, goal);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    double progress = (currentInTank / goal).clamp(0, 1);
     return Scaffold(
       backgroundColor: Colors.blue.shade50,
       body: Center(
@@ -40,7 +50,7 @@ class _WaterTrackState extends State<WaterTrack> {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "5000 LTR",
+                    " +${currentInTank}",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -61,12 +71,12 @@ class _WaterTrackState extends State<WaterTrack> {
                   child: CircularProgressIndicator(
                     color: Colors.blue,
                     backgroundColor: Colors.grey,
-                    value: 0.7,
+                    value: progress,
                     strokeWidth: 20,
                   ),
                 ),
                 Text(
-                  "80%",
+                  "${progress * 100}%".toString(),
                   style: TextStyle(
                     color: Colors.blue,
                     fontWeight: FontWeight.bold,
@@ -77,11 +87,15 @@ class _WaterTrackState extends State<WaterTrack> {
             ),
 
             SizedBox(height: 60),
-            CustomButton(onClick: () {}, amount: 200),
+            CustomButton(
+              onClick: () => addWater(200),
+              amount: 200,
+              icon: Icons.waterfall_chart,
+            ),
             SizedBox(height: 15),
-            CustomButton(onClick: () {}, amount: 500),
+            CustomButton(onClick: () => addWater(500), amount: 500),
             SizedBox(height: 15),
-            CustomButton(onClick: () {}, amount: 1000),
+            CustomButton(onClick: () => addWater(1000), amount: 1000),
             SizedBox(height: 15),
 
             Padding(
